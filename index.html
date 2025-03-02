@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+     .container{
+        display:flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        z-index: 90;
+    }
+
+    .we{
+        padding-left: 20px;
+        margin-top:15px;
+    }
+
+    .ex{
+        padding-left: 20px;
+        font-size:16px;
+        font-family: cursive;
+        color: brown;
+    }
+
+    .item-card{
+        width:400px;
+        height:440px;
+        border: 2px solid ;
+        border-radius:15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding-bottom: 40px;
+        margin: 10px 20px;
+    }
+
+    .item-image{
+       width:70%;
+       display: block;
+       margin:10px auto;
+       height:200px ;
+       object-fit: cover;
+    }
+
+    .item-title{
+        text-align: center;
+        font-size:29px ;
+    }
+
+    .item-description{
+        text-align: justify;
+        padding: 0 10px;
+        margin-bottom:30px;
+    }
+
+    .item-button{
+        display: block;
+        margin:0 auto;
+        padding: 5px 20px;
+        font-size:18px;
+        border-radius: 30px;
+        border:none;
+        background-color:rgb(210, 79, 31);
+    }
+
+    .navbar{
+        background-color:rgb(106, 161, 175)	;
+        color: azure;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        position: sticky;
+        top:0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        font-size:15px;
+        font-family:'Times New Roman', Times, serif;
+
+    }
+
+    .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px ;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            text-decoration:underline;
+        }
+
+    .place-logo{
+        height: 60px;
+    }
+
+    .right{
+        margin-left: 250px;
+    }
+
+    .home{
+        margin-left:200px;
+    }
+
+    .places{
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-item{
+        height: 30px;
+        display: none;
+    }
+    
+    /*Mobile */
+    @media (max-width:600px){
+        .item-title{
+            text-align:left ;
+            padding-left: 10px;
+            font-size: 22px;
+            margin: 5px;
+        }
+
+        .item-card{
+        width:400px;
+        height:420px;
+        }
+
+        .item-button{
+            font-size: 20px;
+            padding: 5px 20px;
+        }
+
+        .navbar a{
+            display: none;
+        }
+
+        .menu-item{
+           display: block;
+           margin-left: auto;
+           margin-right:30px;
+    } 
+
+    }
+
+    /* Tablet */
+    @media(min-width:601px) and (max-width:800px){
+
+        .item-card{
+            width: 300px;
+            height: 450px;
+        }
+
+        .item-description{
+            font-size: 15px;
+        }
+
+        .item-button{
+            font-size: 20px;
+            padding: 5px 20px;
+
+        }
+
+    
+    } 
+
+    /* Laptop */
+    @media(min-width:801px) and (max-width:1024px) {}
+
+         
+
+</style>
+
+
+<body>
+    
+    <div class="navbar">
+        <div class="places">
+            <img src="places_icon.webp" class="place-logo" alt="place">&nbsp;&nbsp;
+            <h2>Places in Pune</h2>
+        </div>
+        <a href="#home" class="home">Home</a>
+        <a href="#about">About</a>
+        <a href="#festivals">Festivals</a>
+        <a href="#regions">Regions</a>
+        <a href="#celebrations">Celebrations</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#resources" class="right">Resources</a>
+
+        <img src="images\menu.png" class="menu-item" alt="menu">
+    </div>
+
+
+    <h1 class="we"> Welcome to Pune !!!</h1>
+    <p class="ex">Explore the vibrant culture and traditions of Pune!</p>
+
+    
+<div class="container">
+    <div class="item-card">
+        <img src="ganpati.jpg" class="item-image" alt="rb">
+        <h1 class="item-title">Dagadu Sheth Ganpati</h1>
+        <p class="item-description">The Dagadusheth Halwai Ganapati temple is a Hindu Temple located in Pune and is dedicated to the Hindu god
+            Ganesh. The temple is visited by over one hundred thousand pilgrims every year. Devotees of the temple
+            include celebrities and chief ministers of Maharashtra who visit during the annual ten-day Ganeshotsav
+            festival. </p>
+       <button class="item-button">View more</button>
+    </div> 
+
+<div class="item-card">
+    <img src="iskon2.jpg" class="item-image" alt="rb">
+    <h1 class="item-title">Iskon Temple</h1>
+    <p class="item-description">ISKCON was founded by Abhaya Caranaravinda Bhaktivedanta Swami (born Abhay Charan De) in New York City, USA, in
+        the year 1966. He is considered the spiritual guru of the organization. ISKCON was founded to encourage the
+        practice of Bhakti Yoga or Krishna Consciousness.3 Nov 2023</p>
+    <button class="item-button">View more</button>
+</div> 
+
+<div class="item-card">
+    <img src="Shaniwar_wada.jpg" class="item-image" alt="rb">
+    <h1 class="item-title">ShaniwarWada</h1>
+    <p class="item-description"> <it> The Shaniwar Wada was normally the seven-story capital building of the Peshwas of the Maratha Empire.
+        It was supposed to be made entirely of stone. It is located near Dagadusheth Ganpati mandir pune.
+        
+ 
+    </p>
+   <button class="item-button">View more</button>
+</div> 
+
+<div class="item-card">
+    <img src="Swaminarayan Temple..jpg" class="item-image" alt="rb">
+    <h1 class="item-title">Swaminarayan Temple</h1>
+    <p class="item-description">The BAPS Shri Swaminarayan Mandir in Pune is a stunning temple that was inaugurated in February 2017. 
+        It is located on the Mumbai-Bengaluru National Highway 4, Narhe - Ambegaon Road, Pune.
+         The temple is known for its intricate hand-carved stone architecture, built according to the principles of ancient Indian Shilpshastra. 
+
+    </p>
+   <button class="item-button">View more</button>
+</div> 
+
+<div class="item-card">
+    <img src="Sarasbag2.jpg" class="item-image" alt="rb">
+    <h1 class="item-title">Sarasbag</h1>
+    <p class="item-description"> Saras Baug was built in the 20th century around the temple which was built in the mid-18th century in the middle
+        of a lake that once existed in Pune. The idea of building a Ganesh Temple near the Parvati Temple was
+        conceptualised by Nanasaheb Peshwe. The construction began in 1750 and was completed 34 years later, in 1784.
+        
+    </p>
+   <button class="item-button">View more</button>
+  
+</div> 
+
+
+<div class="item-card">
+    <img src="Lal Mahal.jpg" class="item-image" alt="rb">
+    <h1 class="item-title">Lal Mahal</h1>
+    <p class="item-description"> The Lal Mahal, also known as the Red Palace, is one of Pune's most famous historical landmarks. 
+        It was originally established in 1630 AD by Shahaji Bhosale for his wife Jijabai and son, Chhatrapati Shivaji Maharaj. 
+        Shivaji Maharaj spent his childhood here and stayed until he captured his first fort
+    </p>
+   <button class="item-button">View more</button>
+</div> 
+
+<div class="item-card">
+    <img src="Agakhan2.jpg" class="item-image" alt="rb">
+    <h1 class="item-title"> Agakhan</h1>
+    <p class="item-description"> Historically, the palace holds great significance. Mahatma Gandhi, his wife Kasturba Gandhi and his secretary
+        Mahadev Desai were interned in the palace from 9 August 1942 to 6 May 1944, following the launch of Quit India
+        Movement. Kasturba Gandhi and Mahadev Desai died during their captivity period in the palace and have their
+        Samadhis located over there.
+    </p>
+   <button class="item-button">View more</button>
+</div> 
+
+ </div>
+    
+</body>
+</html>
