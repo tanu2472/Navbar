@@ -85,6 +85,20 @@
         font-family:'Times New Roman', Times, serif;
 
     }
+    .menu-item {
+    height: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-item.active + .navbar a {
+    display: block;
+}
+
+.navbar.active a {
+    display: block;
+}
+
 
     .navbar a {
             float: left;
@@ -151,8 +165,10 @@
            margin-left: auto;
            margin-right:30px;
     } 
+   
 
-    }
+    
+    
 
     /* Tablet */
     @media(min-width:601px) and (max-width:800px){
@@ -171,6 +187,22 @@
             padding: 5px 20px;
 
         }
+        .navbar {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        display: none;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu a {
+        display: block;
+    }
+}
 
     
     } 
@@ -184,7 +216,6 @@
 
 
 <body>
-    
     <div class="navbar">
         <div class="places">
             <img src="places_icon.webp" class="place-logo" alt="place">&nbsp;&nbsp;
@@ -197,14 +228,14 @@
         <a href="#celebrations">Celebrations</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
-        <a href="#resources" class="right">Resources</a>
-
-        <img src="images\menu.png" class="menu-item" alt="menu">
-    </div>
-
-
+        <a href="#resources" class="right">Resources</a>&nbsp;&nbsp;
+        <img src="hamberg_menu.jpg" class="menu-item" alt="place" >
+        
+        </div>
+    
     <h1 class="we"> Welcome to Pune !!!</h1>
     <p class="ex">Explore the vibrant culture and traditions of Pune!</p>
+</div>
 
     
 <div class="container">
